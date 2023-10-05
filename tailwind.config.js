@@ -16,9 +16,6 @@ export default {
           900: '#232E35'
         },
         gray:{
-          100: '#F2F2F2',
-          200: '#FBFBFB',
-          300: '#D9D9D9',
           400: '#656D72',
         },
         screens: {

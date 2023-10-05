@@ -12,9 +12,8 @@ export const Header: React.FC = () => {
         <li className='list-none hover:text-purple-500'><a href="#">Portfolio</a></li>
         <li className='list-none hover:text-purple-500'><a href="#">Contato</a></li>
       </nav>
-      <span className='flex items-center gap-8'>
+      <span className='lg:hidden flex items-center gap-8'>
         {/* <button><Moon size={24} /></button> */}
-        <button className='hidden lg:flex border border-1 border-blue-900 px-4 py-2 rounded-lg hover:bg-blue-900 hover:text-gray-300'>Resume</button>
         <Menu/>
       </span>
     </header>
