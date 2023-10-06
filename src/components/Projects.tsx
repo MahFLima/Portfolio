@@ -13,38 +13,38 @@ interface Props {
 const Projects: React.FC = () => {
   const [listProject, setListProject] = useState<Props[]>(data);
 
+  useEffect(()=>{
+    setListProject(data)
+  },[])
+
+  function scrollToTarget(target: any) {
+    const targetElement = document.querySelector(target);
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
   return (
-    <div className="py-24 bg-gray-200 flex flex-col items-center gap-12">
-      <div className="mb-4">
+    <div id="projects" className="py-20 bg-gray-200 flex flex-col gap-4">
+      <div className="pl-12">
         <p className=" text-xs text-gray-400 tracking-widest">MEUS PROJETOS</p>
         <strong className="font-semibold text-3xl text-center">
           Portfólio
         </strong>
       </div>
-      <section className="flex gap-4">
-        <Project
-          title={listProject[0].title}
-          link={listProject[0].link}
-          linkIMG={listProject[0].linkIMG}
-          children={
-            <>
-              <Tag name={listProject[0].children[0]} />
-              <Tag name={listProject[0].children[1]} />
-            </>
-          }
-        />
-        <Project
-          title={listProject[1].title}
-          link={listProject[1].link}
-          linkIMG={listProject[1].linkIMG}
-          children={
-            <>
-              <Tag name={listProject[1].children[0]} />
-              <Tag name={listProject[1].children[1]} />
-              <Tag name={listProject[1].children[2]} />
-            </>
-          }
-        />
+      <section className="px-10 ">
+        {listProject.map((project, index)=>{return (
+          <Project
+            id={index}
+            title={project.title}
+            link={project.link}
+            linkIMG={project.linkIMG}
+            children={<>{project.children.map((item, index) => {return(<Tag id={index} name={item}/>)})}</>}
+          />
+        )})}
       </section>
     </div>
   );

@@ -10,5 +10,11 @@ export default[
         link: "https://mahflima.github.io/pomodoro/",
         linkIMG: "https://i.pinimg.com/564x/20/6c/f0/206cf09954a9aa3b95aa0b7248cdd320.jpg",
         children: ['HTML', 'CSS', 'JavaScript']
+    },
+    {
+        title: "DT Money",
+        link: "mahflima.github.io/DT-Money/",
+        linkIMG: "https://github.com/MahFLima/DT-Money/raw/main/assets/home.png",
+        children: ['HTML', 'CSS', 'JavaScript']
     }
 ]

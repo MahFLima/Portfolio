@@ -20,17 +20,17 @@ export const Menu: React.FC = () => {
       {/* 2nd level menu */}
       <ul className={isChecked ? "origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[200px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl" : "hidden"}>
         <li>
-          <a className="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+          <a className="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#about">
             <span className="whitespace-nowrap">Sobre</span>
           </a>
         </li>
         <li>
-          <a className="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+          <a className="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#expirience">
             <span className="whitespace-nowrap">Experiencia</span>
           </a>
         </li>
         <li>
-          <a className="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+          <a className="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#projects">
             <span className="whitespace-nowrap">Portfolio</span>
           </a>
         </li>
