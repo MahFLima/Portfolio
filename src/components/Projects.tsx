@@ -17,16 +17,6 @@ const Projects: React.FC = () => {
     setListProject(data)
   },[])
 
-  function scrollToTarget(target: any) {
-    const targetElement = document.querySelector(target);
-    if (targetElement) {
-        window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
-        });
-    }
-}
-
   return (
     <div id="projects" className="py-20 bg-gray-200 flex flex-col gap-4">
       <div className="pl-12">
