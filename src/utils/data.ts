@@ -2,7 +2,7 @@ export default[
     {
         title: "ToDo List",
         link: "https://to-do-list-mahflima.vercel.app/",
-        linkIMG: "https://i.pinimg.com/564x/36/f2/23/36f223934c90dc1dc1020014787d37c4.jpg",
+        linkIMG: "https://i.pinimg.com/564x/fe/9c/23/fe9c23afdc90eb4307be9617b27cdeab.jpg",
         children: ['React', 'Tailwind CSS']
     },
     {
@@ -13,7 +13,7 @@ export default[
     },
     {
         title: "DT Money",
-        link: "mahflima.github.io/DT-Money/",
+        link: "https://mahflima.github.io/DT-Money/",
         linkIMG: "https://github.com/MahFLima/DT-Money/raw/main/assets/home.png",
         children: ['HTML', 'CSS', 'JavaScript']
     }

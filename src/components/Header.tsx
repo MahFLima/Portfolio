@@ -4,7 +4,7 @@ import { Menu } from "./Menu";
 
 export const Header: React.FC = () => {
   return (
-    <header className="w-full flex items-center px-4 py-2 lg:px-28 lg:py-4 justify-between bg-gray-200 fixed top-0 z-10">
+    <header className="w-full flex items-center px-4 py-2 lg:px-20 lg:py-4 justify-between bg-gray-200 fixed top-0 z-10">
       <p className="text-blue-900 font-semibold text-3xl">
         <Icon />
       </p>

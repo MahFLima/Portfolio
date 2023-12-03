@@ -10,23 +10,23 @@ interface Props {
 
 function Project(props: Props) {
   return (
-    <div className="mb-10 inline-block ml-4">
+    <div className="w-[80%] flex flex-col relative rounded-2xl">
       <a
         href={props.link}
         key={props.id}
         target="_blank"
-        className="inline-block w-full h-72 opacity-70 hover:opacity-100"
-      >
+        className="absolute w-full h-full bg-black opacity-20 hover:opacity-0"
+      ></a>
         <img
-          className="w-96 h-72 object-cover rounded-t-2xl"
+          className="w-full h-72 object-cover"
           src={props.linkIMG}
           alt=""
         />
-        <div className="w-96 py-4 px-2 bg-white rounded-b-2xl">
-          <p className="text-base font-medium">{props.title}</p>
-          <div className="flex gap-3 mt-3">{props.children}</div>
+        <div className="bg-white p-4">
+          <p className="">{props.title}</p>
+          <div className="flex gap-2 mt-4">{props.children}</div>
         </div>
-      </a>
+      
     </div>
   );
 }
