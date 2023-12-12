@@ -5,10 +5,10 @@ import data from "../utils/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import 'swiper/css';
-import 'swiper/css/scrollbar';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface Props {
   title: string;
@@ -27,8 +27,7 @@ const Projects: React.FC = () => {
   return (
     <div id="projects" className="py-20 bg-gray-200 flex flex-col gap-4">
       <div className="flex">
-        <div className="w-[10%]"></div>
-        <div className="">
+        <div className="max-w-6xl w-full m-auto px-4">
           <p className=" text-xs text-gray-400 tracking-widest">
             MEUS PROJETOS
           </p>
@@ -37,49 +36,10 @@ const Projects: React.FC = () => {
           </strong>
         </div>
       </div>
-      {/* <section className="flex justify-center gap-4 flex-wrap">
-        {listProject.map((project, index) => {
-          return (
-            <Project
-              id={index}
-              title={project.title}
-              link={project.link}
-              linkIMG={project.linkIMG}
-              children={
-                <>
-                  {project.children.map((item, index) => {
-                    return <Tag id={index} name={item} />;
-                  })}
-                </>
-              }
-            />
-          );
-        })}
-      </section> */}
-      <Swiper 
-        slidesPerView={1}
-        slidesPerGroupSkip={1}
-        navigation={true}
-        modules={[Navigation]} 
-        centeredSlides={false}
-        keyboard={{
-          enabled: true,
-        }}
-        className="mt-10"
-        breakpoints={{
-          769: {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-          },
-          1240: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-          },
-        }}
-      >
-        {listProject.map((project, index) => {
-          return (
-            <SwiperSlide>
+      <div className="flex justify-center">
+        <section className="max-w-6xl w-full gap-4 flex px-4 overflow-x-auto">
+          {listProject.map((project, index) => {
+            return (
               <Project
                 id={index}
                 title={project.title}
@@ -93,10 +53,11 @@ const Projects: React.FC = () => {
                   </>
                 }
               />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+            );
+          })}
+        </section>
+        
+      </div>
     </div>
   );
 };

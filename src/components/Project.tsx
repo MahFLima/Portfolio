@@ -10,12 +10,12 @@ interface Props {
 
 function Project(props: Props) {
   return (
-    <div className="w-[80%] flex flex-col relative rounded-2xl">
+    <div className="min-w-[320px] flex flex-col relative rounded-2xl">
       <a
         href={props.link}
         key={props.id}
         target="_blank"
-        className="absolute w-full h-full bg-black opacity-20 hover:opacity-0"
+        className="absolute min-w-[320px] w-full h-full bg-black opacity-20 hover:opacity-0"
       ></a>
         <img
           className="w-full h-72 object-cover"
